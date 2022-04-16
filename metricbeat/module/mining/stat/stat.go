@@ -70,6 +70,7 @@ func (m *MetricSet) Fetch(reporter mb.ReporterV2) error {
 	response, err := m.http.FetchResponse()
 	if err != nil {
 		reporter.Error(errors.Wrapf(err, "unable to fetch data from metrics endpoint"))
+		return nil
 	}
 	defer func() {
 		if err := response.Body.Close(); err != nil {
@@ -80,7 +81,8 @@ func (m *MetricSet) Fetch(reporter mb.ReporterV2) error {
 	// parse events
 	body, err := ioutil.ReadAll(response.Body)
 	if err != nil {
-		return err
+		reporter.Error(errors.Wrapf(err, "unable to parse from fetched data"))
+		return nil
 	}
 
 	// report events
