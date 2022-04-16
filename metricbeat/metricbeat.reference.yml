@@ -666,6 +666,14 @@ metricbeat.modules:
   hosts: ["localhost:11211"]
   enabled: true
 
+#-------------------------------- Mining Module --------------------------------
+- module: mining
+  metricsets: ["stat"]
+  enabled: false
+  period: 10s
+  hosts: ["localhost"]
+
+
 #------------------------------- MongoDB Module -------------------------------
 - module: mongodb
   metricsets: ["dbstats", "status", "collstats", "metrics", "replstatus"]

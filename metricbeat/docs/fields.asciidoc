@@ -58,6 +58,7 @@ grouped in the following categories:
 * <<exported-fields-linux>>
 * <<exported-fields-logstash>>
 * <<exported-fields-memcached>>
+* <<exported-fields-mining>>
 * <<exported-fields-mongodb>>
 * <<exported-fields-mssql>>
 * <<exported-fields-munin>>
@@ -47439,6 +47440,214 @@ type: long
 +
 --
 Number of bytes this server is allowed to use for storage.
+
+
+type: long
+
+--
+
+[[exported-fields-mining]]
+== mining fields
+
+mining module
+
+
+
+[float]
+=== mining
+
+
+
+
+[float]
+=== stat
+
+stat metrics
+
+
+
+[float]
+=== miner
+
+Mining software information
+
+
+
+*`mining.stat.miner.name`*::
++
+--
+Name of mining software
+
+
+type: keyword
+
+--
+
+*`mining.stat.miner.version`*::
++
+--
+Version of mining software
+
+
+type: keyword
+
+--
+
+*`mining.stat.miner.uptime`*::
++
+--
+Uptime of mining software
+
+
+type: long
+
+--
+
+*`mining.stat.miner.pool`*::
++
+--
+Pool of mining software
+
+
+type: keyword
+
+--
+
+*`mining.stat.miner.address`*::
++
+--
+User address of mining software
+
+
+type: keyword
+
+--
+
+*`mining.stat.miner.algorithm`*::
++
+--
+Running algorithm of mining software
+
+
+type: keyword
+
+--
+
+[float]
+=== gpu
+
+GPU device information
+
+
+
+*`mining.stat.gpu.id`*::
++
+--
+Id of gpu device
+
+
+type: long
+
+--
+
+*`mining.stat.gpu.name`*::
++
+--
+Name of gpu device
+
+
+type: keyword
+
+--
+
+[float]
+=== temperature
+
+Device Temperature
+
+
+
+*`mining.stat.gpu.temperature.core`*::
++
+--
+Core chipset temperature
+
+
+type: long
+
+--
+
+*`mining.stat.gpu.temperature.memory`*::
++
+--
+Memory chipset temperature
+
+
+type: long
+
+--
+
+*`mining.stat.gpu.fan`*::
++
+--
+GPU fan speed as percentile
+
+
+type: long
+
+--
+
+*`mining.stat.gpu.hashrate`*::
++
+--
+GPU hashrate
+
+
+type: long
+
+--
+
+*`mining.stat.gpu.power`*::
++
+--
+GPU consumption power as wattage(W)
+
+
+type: long
+
+--
+
+[float]
+=== share
+
+Share information
+
+
+
+*`mining.stat.gpu.share.accepted`*::
++
+--
+Total accepted shares
+
+
+type: long
+
+--
+
+*`mining.stat.gpu.share.rejected`*::
++
+--
+Total rejected shares
+
+
+type: long
+
+--
+
+*`mining.stat.gpu.share.stale`*::
++
+--
+Total stale shares
 
 
 type: long

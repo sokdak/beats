@@ -1,0 +1,9 @@
+# Module: mining
+# Docs: https://www.elastic.co/guide/en/beats/metricbeat/8.1/metricbeat-module-mining.html
+
+- module: mining
+  metricsets: ["stat"]
+  enabled: false
+  period: 10s
+  hosts: ["localhost"]
+

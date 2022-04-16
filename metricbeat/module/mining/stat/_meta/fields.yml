@@ -1,0 +1,90 @@
+- name: stat
+  type: group
+  release: beta
+  description: >
+    stat metrics
+  fields:
+    - name: miner
+      type: group
+      description: >
+        Mining software information
+      fields:
+        - name: name
+          type: keyword
+          description: >
+            Name of mining software
+        - name: version
+          type: keyword
+          description: >
+            Version of mining software
+        - name: uptime
+          type: long
+          description: >
+            Uptime of mining software
+        - name: pool
+          type: keyword
+          description: >
+            Pool of mining software
+        - name: address
+          type: keyword
+          description: >
+            User address of mining software
+        - name: algorithm
+          type: keyword
+          description: >
+            Running algorithm of mining software
+    - name: gpu
+      type: group
+      description: >
+        GPU device information
+      fields:
+        - name: id
+          type: long
+          description: >
+            Id of gpu device
+        - name: name
+          type: keyword
+          description: >
+            Name of gpu device
+        - name: temperature
+          type: group
+          description: >
+            Device Temperature
+          fields:
+            - name: core
+              type: long
+              description: >
+                Core chipset temperature
+            - name: memory
+              type: long
+              description: >
+                Memory chipset temperature
+        - name: fan
+          type: long
+          description: >
+            GPU fan speed as percentile
+        - name: hashrate
+          type: long
+          description: >
+            GPU hashrate
+        - name: power
+          type: long
+          description: >
+            GPU consumption power as wattage(W)
+        - name: share
+          type: group
+          description: >
+            Share information
+          fields:
+            - name: accepted
+              type: long
+              description: >
+                Total accepted shares
+            - name: rejected
+              type: long
+              description: >
+                Total rejected shares
+            - name: stale
+              type: long
+              description: >
+                Total stale shares

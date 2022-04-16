@@ -1,0 +1,10 @@
+- key: mining
+  title: "mining"
+  release: beta
+  description: >
+    mining module
+  fields:
+    - name: mining
+      type: group
+      description: >
+      fields:
