@@ -193,6 +193,8 @@ require (
 	kernel.org/pub/linux/libs/security/libcap/cap v1.2.57
 )
 
+require github.com/sokdak/miner-exporter v1.0.1
+
 require (
 	cloud.google.com/go v0.97.0 // indirect
 	code.cloudfoundry.org/gofileutils v0.0.0-20170111115228-4d0c80011a0f // indirect

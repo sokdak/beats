@@ -47533,6 +47533,16 @@ type: keyword
 
 --
 
+*`mining.stat.miner.worker`*::
++
+--
+Worker name of mining software
+
+
+type: keyword
+
+--
+
 [float]
 === gpu
 

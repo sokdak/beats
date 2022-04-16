@@ -33,6 +33,10 @@
           type: keyword
           description: >
             Running algorithm of mining software
+        - name: worker
+          type: keyword
+          description: >
+            Worker name of mining software
     - name: gpu
       type: group
       description: >

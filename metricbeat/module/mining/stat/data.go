@@ -25,6 +25,7 @@ func parseResponse(data []byte) []mb.Event {
 				"miner.pool": status.Miner.Pool,
 				"miner.address": status.Miner.Address,
 				"miner.algorithm": status.Miner.Algorithm,
+				"miner.worker": status.Miner.Worker,
  			},
 			MetricSetFields:   common.MapStr{
 				"gpu.id": dev.GpuId,
