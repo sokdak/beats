@@ -2,6 +2,7 @@ package stat
 
 import (
 	"encoding/json"
+	"fmt"
 	"github.com/elastic/beats/v7/libbeat/common"
 	"github.com/elastic/beats/v7/metricbeat/mb"
 	"github.com/sokdak/miner-exporter/pkg/dto"
@@ -30,6 +31,7 @@ func parseResponse(data []byte) []mb.Event {
 			MetricSetFields:   common.MapStr{
 				"gpu.id": dev.GpuId,
 				"gpu.model": dev.Name,
+				"gpu.unique_id": fmt.Sprintf("%s-#%d(%s)", status.Miner.Worker, dev.GpuId, dev.Name),
 				"gpu.temperature.core": dev.CoreTemp,
 				"gpu.temperature.memory": dev.MemoryTemp,
 				"gpu.fan": dev.FanSpeed,
